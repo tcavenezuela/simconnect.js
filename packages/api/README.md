@@ -1,6 +1,6 @@
 <img src="https://github.com/tcavenezuela/simconnect.js/assets/8359234/e8a8b35c-fc78-4615-a39f-db1a840bfaa9" alt="simconnect.js" width="250"/> 
 
-[![npm version](https://badge.fury.io/js/simconnect.js.svg)](https://badge.fury.io/js/simconnect.js)
+[![npm version](https://badge.fury.io/js/@simconnect.js%2Fapi.svg)](https://badge.fury.io/js/@simconnect.js%2Fapi)
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 [![release](https://github.com/tcavenezuela/simconnect.js/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/tcavenezuela/simconnect.js/actions/workflows/release.yml)
 
