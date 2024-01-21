@@ -27,7 +27,7 @@
     "lint": "eslint \"src/**/*.ts\""
   },
   "dependencies": {
-    "simconnect.js": "*"
+    "simconnect.js": "^1.0.0"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
