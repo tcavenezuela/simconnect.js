@@ -1,6 +1,6 @@
 {
   "name": "@simconnect.js/api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/tcavenezuela/simconnect.js/tree/master/packages/api#readme",
   "bugs": {
@@ -27,7 +27,7 @@
     "lint": "eslint \"src/**/*.ts\""
   },
   "dependencies": {
-    "simconnect.js": "^1.0.0"
+    "simconnect.js": "^1.0.1"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
