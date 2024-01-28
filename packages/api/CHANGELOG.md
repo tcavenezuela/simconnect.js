@@ -1,5 +1,11 @@
 # @simconnect.js/api
 
+## 1.0.2
+
+### Patch Changes
+
+- becea22: Change throw error to use the onException callback to avoid an unhandle promise rejection.
+
 ## 1.0.1
 
 ### Patch Changes
