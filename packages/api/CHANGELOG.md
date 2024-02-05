@@ -1,5 +1,12 @@
 # @simconnect.js/api
 
+## 1.0.3
+
+### Patch Changes
+
+- a44d9cc: Update README.md to fix some examples
+- 86f559b: Fix get method prop names access
+
 ## 1.0.2
 
 ### Patch Changes
