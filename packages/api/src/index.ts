@@ -275,24 +275,13 @@ export class SIMCONNECT_API {
    * @returns
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  get(...propNames: any[]) {
+  get(propNames: any[]) {
     if (!this.connected) throw new Error(SIM_NOT_CONNECTED);
 
     const DATA_ID = this.nextId();
     const REQUEST_ID = DATA_ID;
     propNames = propNames.map((s) => s.replaceAll(`_`, ` `));
-    // see if this is a special, non-simconnect variable:
-    if (propNames.length === 1 && this.simulatorName === 'MSFS') {
-      const [propName] = propNames;
-      for (const get of this.specialGetHandlers) {
-        /* @ts-ignore */
-        if (get.supports(propName)) {
-          /* @ts-ignore */
-          return get(propName);
-        }
-      }
-    }
-    // if not, regular lookup.
+
     const defs = propNames.map((propName) => SimVars[propName]);
     this.addDataDefinitions(DATA_ID, propNames, defs);
     return this.generateGetPromise(DATA_ID, REQUEST_ID, propNames, defs);
@@ -351,7 +340,7 @@ export class SIMCONNECT_API {
    * schedule and the second function stops the schedule.
    */
   schedule(
-    handler: (arg0: () => unknown) => void,
+    handler: (arg0: unknown) => void,
     interval: number,
     propNames: string[],
     startByDefault: boolean
@@ -359,7 +348,7 @@ export class SIMCONNECT_API {
     if (!this.connected) throw new Error(SIM_NOT_CONNECTED);
     let running = startByDefault;
     const run = async () => {
-      handler(await this.get(...propNames));
+      handler(await this.get(propNames));
       if (running) setTimeout(run, interval);
     };
     run();
