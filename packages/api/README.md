@@ -42,7 +42,7 @@ simconnect.connect({
 async function connect(handle, recvOpen) {
   console.log(`Simulator connected`, recvOpen);
 
-  const [start, stop] = api.schedule(
+  const [start, stop] = simconnect.schedule(
     (data) => {
       console.log("data", data);
     },
@@ -109,7 +109,7 @@ simconnect.connect({
   retries: Infinity,
   retryInterval: 5,
   onConnect: () => {
-    api.on(SystemEvents.PAUSED, () => {
+    simconnect.on(SystemEvents.PAUSED, () => {
       // ...
     });
   },
