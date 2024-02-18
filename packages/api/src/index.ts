@@ -352,12 +352,12 @@ export class SIMCONNECT_API {
       if (running) setTimeout(run, interval);
     };
     run();
-    return [
-      () => {
+    return {
+      start: () => {
         running = true;
         run();
       },
-      () => (running = false)
-    ];
+      stop: () => (running = false)
+    };
   }
 }
