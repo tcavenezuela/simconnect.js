@@ -1,5 +1,11 @@
 # @simconnect.js/api
 
+## 1.0.4
+
+### Patch Changes
+
+- 1c17e3c: Change data type for some radio navigation variables
+
 ## 1.0.3
 
 ### Patch Changes
