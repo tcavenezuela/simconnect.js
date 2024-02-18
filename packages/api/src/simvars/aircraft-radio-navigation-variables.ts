@@ -205,9 +205,9 @@ const ATC = {
 };
 
 const COM = {
-  'COM1 STORED FREQUENCY': define(`The stored COM 1/2/3 frequency value.`, BCD16, Int32),
-  'COM2 STORED FREQUENCY': define(`The stored COM 1/2/3 frequency value.`, BCD16, Int32),
-  'COM3 STORED FREQUENCY': define(`The stored COM 1/2/3 frequency value.`, BCD16, Int32),
+  'COM1 STORED FREQUENCY': define(`The stored COM 1/2/3 frequency value.`, MHz, Float64),
+  'COM2 STORED FREQUENCY': define(`The stored COM 1/2/3 frequency value.`, MHz, Float64),
+  'COM3 STORED FREQUENCY': define(`The stored COM 1/2/3 frequency value.`, MHz, Float64),
   'COM ACTIVE BEARING:index': define(
     `Gives the bearing (in degrees) of the active COM station (airport) or a value less than 0 if the station does not belong to an airport. Index is 1, 2 or 3.`,
     Degrees,
@@ -218,7 +218,7 @@ const COM = {
     Meters,
     Float64
   ),
-  'COM ACTIVE FREQUENCY:index': define(`Com frequency. Index is 1, 2 or 3.`, BCD16, Int32),
+  'COM ACTIVE FREQUENCY:index': define(`Com frequency. Index is 1, 2 or 3.`, MHz, Float64),
   'COM ACTIVE FREQ IDENT:index': define(
     `The identity of the station that is tuned on the indexed active COM radio. Index is 1, 2, or 3.`,
     NullUnit,
