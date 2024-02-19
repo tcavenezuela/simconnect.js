@@ -1,5 +1,11 @@
 # @simconnect.js/api
 
+## 1.0.5
+
+### Patch Changes
+
+- e96ecc1: Add start and stop return methods for schedule function
+
 ## 1.0.4
 
 ### Patch Changes
