@@ -158,7 +158,7 @@ export class SIMCONNECT_API {
    * @param {*} eventHandler function that gets called when the event triggers
    * @returns
    */
-  on(eventDefinition: { name: string }, eventHandler: () => void) {
+  on(eventDefinition: { name: string }, eventHandler: (possibleData?: unknown) => void) {
     if (!this.connected) throw new Error(SIM_NOT_CONNECTED);
     if (!eventDefinition) {
       console.error(`on() called without an event definition`);
