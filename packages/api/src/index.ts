@@ -142,7 +142,7 @@ export class SIMCONNECT_API {
     const entry = this.eventListeners[eventID];
 
     if (!entry) {
-      return console.error(`handling data for id ${eventID} without an event handler entry??`);
+      return console.log(`handling data for id ${eventID} without an event handler entry??`);
     }
 
     entry.data = data;
