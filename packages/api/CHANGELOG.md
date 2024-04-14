@@ -1,5 +1,12 @@
 # @simconnect.js/api
 
+## 1.0.6
+
+### Patch Changes
+
+- f37852a: Change console error to log in the handleSystemEvent in case a eventID is register win the core library
+- fde3780: Fix callback function type in the listener function on
+
 ## 1.0.5
 
 ### Patch Changes
