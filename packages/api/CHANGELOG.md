@@ -1,5 +1,11 @@
 # @simconnect.js/api
 
+## 1.0.7
+
+### Patch Changes
+
+- 0d311bf: fix restart status of connected when the connection crash or just capture an exception
+
 ## 1.0.6
 
 ### Patch Changes
