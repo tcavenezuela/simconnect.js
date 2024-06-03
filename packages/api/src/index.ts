@@ -67,6 +67,7 @@ export class SIMCONNECT_API {
       const { handle, recvOpen } = await open(this.appName, Protocol.FSX_SP2, remote);
 
       if (!handle) {
+        this.connected = false;
         opts.onException('No connection handle to the simulator.');
       }
 
@@ -75,7 +76,10 @@ export class SIMCONNECT_API {
       this.simulatorName = recvOpen.applicationName;
       handle.on('event', (event) => this.handleSystemEvent(event));
       handle.on('close', () => opts.autoReconnect && this.connect(opts));
-      handle.on('exception', (e) => opts.onException(SIMCONNECT_EXCEPTION[e.exception]));
+      handle.on('exception', (e) => {
+        this.connected = false;
+        opts.onException(SIMCONNECT_EXCEPTION[e.exception]);
+      });
 
       opts.onConnect(handle, recvOpen);
     } catch (err) {
@@ -84,6 +88,7 @@ export class SIMCONNECT_API {
         opts.onRetry(opts.retries, opts.retryInterval);
         setTimeout(() => this.connect(opts), 1000 * opts.retryInterval);
       } else {
+        this.connected = false;
         opts.onException('No connection to the simulator.');
       }
     }
