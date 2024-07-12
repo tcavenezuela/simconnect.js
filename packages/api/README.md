@@ -42,7 +42,7 @@ simconnect.connect({
 async function connect(handle, recvOpen) {
   console.log(`Simulator connected`, recvOpen);
 
-  const [start, stop] = simconnect.schedule(
+  const scheduleData = simconnect.schedule(
     (data) => {
       console.log("data", data);
     },
