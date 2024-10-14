@@ -16,7 +16,7 @@
 ### Installation
 
 ```bash
-yarn install simconnect.js
+yarn add simconnect.js
 ```
 
 > Refer to the [package documentation](https://github.com/tcavenezuela/simconnect.js/tree/master/packages/core) for details on SimConnect APIs and usage and the [official SimConnect documentation](https://docs.flightsimulator.com/html/Programming_Tools/SimConnect/SimConnect_API_Reference.htm).
