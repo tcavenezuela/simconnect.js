@@ -1,5 +1,11 @@
 # simconnect.js
 
+## 1.1.0
+
+### Minor Changes
+
+- c0cd734: Add support to MSFS2024 Protocol
+
 ## 1.0.1
 
 ### Patch Changes
