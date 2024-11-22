@@ -14,7 +14,11 @@ export enum Protocol {
   /**
    * MSFS / Asobo
    */
-  KittyHawk = 0x5
+  KittyHawk = 0x5,
+  /**
+   * MSFS 2024 / Asobo
+   */
+  SunRise = 0x6
 }
 
 module.exports = {

@@ -97,7 +97,14 @@ const openPacketData: { [key in Protocol]: OpenPacketData } = {
     minor: 0,
     buildMajor: 62651,
     buildMinor: 3,
-    alias: 'HK' // "Hawk" + "Kitty"?
+    alias: 'HK'
+  },
+  [Protocol.SunRise]: {
+    major: 12,
+    minor: 0,
+    buildMajor: 282174,
+    buildMinor: 999,
+    alias: 'RS'
   }
 };
 
